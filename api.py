@@ -2,7 +2,6 @@ from fastapi import FastAPI, File, UploadFile, Body
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from utils.custom_training import CustomTraining
-from io import BytesIO
 
 app = FastAPI()
 
