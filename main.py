@@ -1,5 +1,4 @@
 from utils.custom_training import CustomTraining
-import pandas as pd
 
 # Create an instance of CustomTraining
 custom_training = CustomTraining('replicated_data.csv', ['SAT'], 'GPA')
