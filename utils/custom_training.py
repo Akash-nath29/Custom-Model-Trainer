@@ -30,15 +30,12 @@ class CustomTraining:
     def train_random_forest_regressor(self):
         X_train, y_train, X_test, y_test = self.data_preparation()
         
-        # Use RandomForestRegressor instead of LinearRegression
         model = RandomForestRegressor(n_estimators=100, random_state=42)
         model.fit(X_train, y_train)
         
-        # Save the model
         with open('model.pkl', 'wb') as f:
             pickle.dump(model, f)
         
-        # Evaluate the model
         y_pred = model.predict(X_test)
         
         return r2_score(y_test, y_pred)
