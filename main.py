@@ -2,7 +2,7 @@ from utils.custom_training import CustomTraining
 import pandas as pd
 
 # Create an instance of CustomTraining
-custom_training = CustomTraining('data.csv')
+custom_training = CustomTraining('replicated_data.csv')
 score = custom_training.model_training()
 
 print("Score: ", str(score))

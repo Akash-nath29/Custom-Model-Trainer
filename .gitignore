@@ -1,3 +1,4 @@
 env/
 utils/__pycache__/
 *.pkl
+replicated_data.csv
