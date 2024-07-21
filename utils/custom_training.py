@@ -7,14 +7,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score
 
 class CustomTraining:
-    def __init__(self, csv_file_path):
+    def __init__(self, csv_file_path, input_column_name: list, output_column_name: str):
         self.csv_file_path = csv_file_path
+        self.input_column_name = input_column_name
+        self.output_column_name = output_column_name
         
     def data_preparation(self):
         df = pd.read_csv(self.csv_file_path)
         data = df.dropna()
-        X = data[['SAT']]
-        y = data['GPA']
+        
+        X = data[self.input_column_name]
+        y = data[self.output_column_name]
         
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         
