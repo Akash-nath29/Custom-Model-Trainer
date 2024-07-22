@@ -70,6 +70,8 @@ pip install pandas scikit-learn matplotlib
 
 The performance of three regression models—Linear Regression, Random Forest Regressor, and Support Vector Regressor (SVR)—was evaluated using the R^2 score to determine their predictive accuracy. The R^2 score, representing the proportion of variance in the target variable explained by the model, was calculated for each algorithm after training on identical data subsets. The Linear Regression model provided a baseline performance, capturing linear relationships with an R^2 score of ```0.4205936575054805```. In contrast, the Random Forest Regressor, which utilizes ensemble learning to model complex, non-linear interactions, achieved an R^2 score of ```0.9229556734847897```, reflecting its superior capacity to fit the data. The SVR, leveraging support vector machines, delivered an R^2 score of ```0.39809432477257944```, demonstrating its effectiveness in high-dimensional spaces with a non-linear decision boundary. This comparative analysis highlights the relative strengths of each model, with Random Forest Regressor exhibiting the highest accuracy, thereby offering the most robust predictive performance in this context.
 
+![accuracy_comparison](https://github.com/user-attachments/assets/38089468-70e0-4195-98c5-0752e112e7d4)
+
 ## Contributing
 
 Feel free to fork the repository and submit pull requests. Issues and feature requests are also welcome.
