@@ -38,6 +38,18 @@ async def train_linear_regression(file: UploadFile = File(...), input_column_nam
     gpa = custom_training.model_prediction([[test_input_value]])
     return {"message": "Model trained successfully!", "score": score, "gpa": gpa[0]}
 
+@app.post("/train_svr")
+async def train_svr(file: UploadFile = File(...), input_column_name: str = Body(...), output_column_name: str = Body(...), test_input_value: int = Body(...)):
+    input_column_name = [input_column_name]
+    file_content = await file.read()
+    with open('new_data.csv', 'wb') as f:
+        f.write(file_content)
+    
+    custom_training = CustomTraining('new_data.csv', input_column_name, output_column_name)
+    score = custom_training.train_svr()
+    gpa = custom_training.model_prediction([[test_input_value]])
+    return {"message": "Model trained successfully!", "score": score, "gpa": gpa[0]}
+
 @app.post('/download_model')
 async def download_model():
     return FileResponse('model.pkl', media_type='application/octet-stream', filename='model.pkl')
