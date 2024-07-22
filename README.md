@@ -26,7 +26,7 @@ pip install pandas scikit-learn matplotlib
    Create an instance of the `CustomTraining` class with the path to your CSV file, a list of input column names, and the output column name.
 
    ```python
-   from custom_training import CustomTraining
+   from utils.custom_training import CustomTraining
 
    csv_file_path = 'path/to/your/csvfile.csv'
    input_column_names = ['input1', 'input2', 'input3']  # List of input columns
