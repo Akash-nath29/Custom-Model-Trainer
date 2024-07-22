@@ -24,6 +24,7 @@ async def train_random_forest_regressor(file: UploadFile = File(...), input_colu
     custom_training = CustomTraining('new_data.csv', input_column_name, output_column_name)
     score = custom_training.train_random_forest_regressor()
     gpa = custom_training.model_prediction([[test_input_value]])
+    print("GPA: ", str(gpa[0]))
     return {"message": "Model trained successfully!", "score": score, "gpa": gpa[0]}
 
 @app.post("/train_linear_regression")

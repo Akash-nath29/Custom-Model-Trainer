@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Model Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Custom Model Training</h1>
+        <label for="file">Upload CSV File</label>
+        <input type="file" name="file" accept=".csv">
+        <label for="input">Input Column Name</label>
+        <input type="text" name="input" placeholder="Input Column Name">
+        <label for="output">Output Column Name</label>
+        <input type="text" name="output" placeholder="Output Column Name">
+        <label for="test">Test Data (SAT)</label>
+        <input type="text" name="test" placeholder="Test Data">
+        <button id="submit">Train Model</button>
+        <div class="output">
+            <h2 id="outputHeading"></h2>
+            <p id="score"></p>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

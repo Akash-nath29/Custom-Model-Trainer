@@ -1,0 +1,87 @@
+/* style.css */
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    /* Dark background */
+    color: #fff;
+    /* White text */
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333;
+    /* Darker background for container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #66d9ef;
+    /* Teal color for heading */
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    /* Darker background for inputs */
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button#submit {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #66d9ef;
+    /* Teal color for button */
+    color: #fff;
+    cursor: pointer;
+}
+
+button#submit:hover {
+    background-color: #4CAF50;
+    /* Green color on hover */
+}
+
+.output {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #444;
+    /* Darker background for output */
+    color: #fff;
+}
+
+.output p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #4bff51;
+}
