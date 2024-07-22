@@ -1,10 +1,11 @@
 import pickle
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score
+from sklearn.svm import LinearSVR
 
 class CustomTraining:
     def __init__(self, csv_file_path, input_column_name: list, output_column_name: str):
@@ -44,6 +45,21 @@ class CustomTraining:
         X_train, y_train, X_test, y_test = self.data_preparation()
         
         model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Save the model
+        with open('model.pkl', 'wb') as f:
+            pickle.dump(model, f)
+        
+        # Evaluate the model
+        y_pred = model.predict(X_test)
+        
+        return r2_score(y_test, y_pred)
+    
+    def train_svr(self):
+        X_train, y_train, X_test, y_test = self.data_preparation()
+        
+        model = LinearSVR()
         model.fit(X_train, y_train)
         
         # Save the model
