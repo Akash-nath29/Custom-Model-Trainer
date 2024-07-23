@@ -9,7 +9,7 @@ from sklearn.svm import LinearSVR
 import matplotlib.pyplot as plt
 
 class CustomTraining:
-    def __init__(self, csv_file_path, input_column_name: list, output_column_name: str):
+    def __init__(self, csv_file_path: str, input_column_name: list, output_column_name: str):
         """
         Initialize the CustomTraining class with the path to the CSV file, input column names, and output column name.
 
