@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "custom_training"
+version = "0.0.1"
+authors = [
+  { name="Akash Nath", email="devakash2905@gmail.com" },
+  { name="Abhinaba Biswas", email="abhispc0001@gmail.com" },
+]
+description = "A package to speed up training machine learning models"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Akash-nath29/Custom-Model-Trainer"
+Issues = "https://github.com/Akash-nath29/Custom-Model-Trainer/issues"

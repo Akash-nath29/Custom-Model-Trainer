@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/custom_training.py
+src/custom_training.egg-info/PKG-INFO
+src/custom_training.egg-info/SOURCES.txt
+src/custom_training.egg-info/dependency_links.txt
+src/custom_training.egg-info/top_level.txt
