@@ -47,3 +47,5 @@ print("Score: ", str(score))
 
 gpa = custom_training.model_prediction([[1700]])
 print("GPA: ", str(gpa[0]))
+
+custom_training.compare_model_accuracies()

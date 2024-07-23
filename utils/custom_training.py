@@ -181,12 +181,14 @@ class CustomTraining:
         lr_score = self.train_linear_regression()
         rf_score = self.train_random_forest_regressor()
         svr_score = self.train_svr()
+        gradient_boosting_score = self.train_gradient_boosting_regressor()
+        knn_score = self.train_knn_regressor()
         
-        models = ['Linear Regression', 'Random Forest Regressor', 'SVR']
-        scores = [lr_score, rf_score, svr_score]
+        models = ['Linear Regression', 'Random Forest Regressor', 'SVR', 'Gradient Boosting Regressor', 'KNN Regressor']
+        scores = [lr_score, rf_score, svr_score, gradient_boosting_score, knn_score]
         
         plt.figure(figsize=(10, 6))
-        plt.bar(models, scores, color=['blue', 'green', 'red'])
+        plt.bar(models, scores, color=['blue', 'green', 'red', 'orange', 'purple'])
         plt.xlabel('Models')
         plt.ylabel('R^2 Score')
         plt.title('Model Comparison')
