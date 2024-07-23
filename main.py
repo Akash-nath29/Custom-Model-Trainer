@@ -28,12 +28,22 @@ print("Score: ", str(score))
 gpa = custom_training.model_prediction([[1700]])
 print("GPA: ", str(gpa[0]))
 
-# # BernoulliNB
-# custom_training = CustomTraining('continuous_dataset.csv', ['SAT'], 'GPA')
+# Gradient Boosting Regressor
+custom_training = CustomTraining('continuous_dataset.csv', ['SAT'], 'GPA')
 
-# score = custom_training.train_bernoulli_nb()
+score = custom_training.train_gradient_boosting_regressor()
 
-# print("Score: ", str(score))
+print("Score: ", str(score))
 
-# gpa = custom_training.model_prediction([[1700]], model_type="bernoullinb")
-# print("GPA: ", str(gpa[0]))
+gpa = custom_training.model_prediction([[1700]])
+print("GPA: ", str(gpa[0]))
+
+# K Neighbors Regressor
+custom_training = CustomTraining('continuous_dataset.csv', ['SAT'], 'GPA')
+
+score = custom_training.train_knn_regressor()
+
+print("Score: ", str(score))
+
+gpa = custom_training.model_prediction([[1700]])
+print("GPA: ", str(gpa[0]))
