@@ -27,3 +27,13 @@ print("Score: ", str(score))
 
 gpa = custom_training.model_prediction([[1700]])
 print("GPA: ", str(gpa[0]))
+
+# # BernoulliNB
+# custom_training = CustomTraining('continuous_dataset.csv', ['SAT'], 'GPA')
+
+# score = custom_training.train_bernoulli_nb()
+
+# print("Score: ", str(score))
+
+# gpa = custom_training.model_prediction([[1700]], model_type="bernoullinb")
+# print("GPA: ", str(gpa[0]))

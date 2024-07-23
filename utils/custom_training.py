@@ -3,9 +3,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, Binarizer
 from sklearn.metrics import r2_score
 from sklearn.svm import LinearSVR
+from sklearn.naive_bayes import BernoulliNB
 import matplotlib.pyplot as plt
 
 class CustomTraining:
@@ -111,6 +112,35 @@ class CustomTraining:
         
         return r2_score(y_test, y_pred)
     
+    # def train_bernoulli_nb(self):
+    #     """
+    #     Train a Bernoulli Naive Bayes model on the prepared data and save the model to a file.
+
+    #     Returns:
+    #         float: Accuracy score of the trained model on the test data.
+    #     """
+    #     X_train, y_train, X_test, y_test = self.data_preparation(model_type="BernoulliNB")
+    #     print(f"X_train: {X_train}, y_train: {y_train}, X_test: {X_test}, y_test: {y_test}")
+
+    #     # Ensure target is binary
+    #     if len(set(y_train)) > 2:
+    #         raise ValueError("BernoulliNB requires a binary target variable. Please preprocess your data to ensure the target is binary.")
+
+    #     model = BernoulliNB()
+    #     model.fit(X_train, y_train)
+
+    #     # Save the model
+    #     with open('model.pkl', 'wb') as f:
+    #         pickle.dump(model, f)
+
+    #     # Evaluate the model
+    #     y_pred = model.predict(X_test)
+        
+    #     # Use accuracy for classification
+    #     accuracy = (y_test == y_pred).mean()
+    #     return accuracy
+
+    
     def model_prediction(self, value:list):
         """
         Load the trained model from a file and make predictions on the given input data.
@@ -125,6 +155,9 @@ class CustomTraining:
             model = pickle.load(f)
         
         X = pd.DataFrame(value)
+        scaler = StandardScaler()
+        X = scaler.fit_transform(X)
+            
         return model.predict(X)
     
     def compare_model_accuracies(self):
