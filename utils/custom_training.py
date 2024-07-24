@@ -184,7 +184,7 @@ class CustomTraining:
         gradient_boosting_score = self.train_gradient_boosting_regressor()
         knn_score = self.train_knn_regressor()
         
-        models = ['Linear Regression', 'Random Forest Regressor', 'SVR', 'Gradient Boosting Regressor', 'KNN Regressor']
+        models = ['Linear', 'Random Forest', 'SVR', 'Gradient Boosting', 'KNN']
         scores = [lr_score, rf_score, svr_score, gradient_boosting_score, knn_score]
         
         plt.figure(figsize=(10, 6))
