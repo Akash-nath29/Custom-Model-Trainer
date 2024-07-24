@@ -19,6 +19,14 @@
         <input type="text" name="output" placeholder="Output Column Name">
         <label for="test">Test Data (SAT)</label>
         <input type="text" name="test" placeholder="Test Data">
+        <label for="model">Model Type</label>
+        <select name="model" id="model">
+            <option value="random_forest">Random Forest Regression</option>
+            <option value="linear_regression">Linear Regression</option>
+            <option value="svr">Support Vector Regressor</option>
+            <option value="gradient_boosting_regressor">Gradient Boosting Regressor</option>
+            <option value="knn_regressor">K N Neighbors</option>
+        </select>
         <button id="submit">Train Model</button>
         <div class="output">
             <h2 id="outputHeading"></h2>

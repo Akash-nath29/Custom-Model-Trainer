@@ -85,3 +85,26 @@ button#submit:hover {
     font-size: 14px;
     color: #4bff51;
 }
+
+select#model {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    /* Darker background for inputs */
+    color: #fff;
+}
+
+select#model option {
+    background-color: #333;
+    /* Darker background for options */
+    color: #fff;
+}
+
+select#model:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
